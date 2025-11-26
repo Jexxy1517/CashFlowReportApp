@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            tools:text="Halo, Nanda!" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/summary_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="?attr/colorPrimary">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_balance_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Saldo Keseluruhan"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="@style/TextAppearance.Material3.DisplaySmall"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_balance_label"
+                    tools:text="Rp 12.500.000" />
+
+                <ImageView
+                    android:id="@+id/iv_income_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_arrow_upward"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_balance"
+                    app:tint="@color/income_green"
+                    android:background="@drawable/circular_white_background"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_income_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Pemasukan"
+                    android:textColor="@color/md_theme_onPrimary"
+                    android:alpha="0.8"
+                    app:layout_constraintStart_toEndOf="@id/iv_income_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_income_icon" />
+
+                <TextView
+                    android:id="@+id/text_total_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_income_icon"
+                    app:layout_constraintStart_toEndOf="@id/iv_income_icon"
+                    app:layout_constraintTop_toBottomOf="@id/tv_income_label"
+                    tools:text="Rp 15.000.000" />
+
+                <ImageView
+                    android:id="@+id/iv_expense_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/ic_arrow_downward"
+                    app:layout_constraintStart_toEndOf="@id/text_total_income"
+                    app:layout_constraintTop_toTopOf="@id/iv_income_icon"
+                    app:tint="@color/expense_red"
+                    android:background="@drawable/circular_white_background"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:id="@+id/tv_expense_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Pengeluaran"
+                    android:textColor="@color/md_theme_onPrimary"
+                    android:alpha="0.8"
+                    app:layout_constraintStart_toEndOf="@id/iv_expense_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_expense_icon" />
+
+                <TextView
+                    android:id="@+id/text_total_expense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_expense_icon"
+                    app:layout_constraintStart_toEndOf="@id/iv_expense_icon"
+                    app:layout_constraintTop_toBottomOf="@id/tv_expense_label"
+                    tools:text="Rp 2.500.000" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Riwayat Transaksi"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            tools:listitem="@layout/item_transaction"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        app:tint="?attr/colorOnPrimary"
+        android:contentDescription="Add Transaction"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

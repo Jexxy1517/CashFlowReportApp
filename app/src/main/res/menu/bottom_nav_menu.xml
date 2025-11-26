@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/transactionsFragment"
+        android:icon="@drawable/ic_list"
+        android:title="Transactions" />
+    <item
+        android:id="@+id/analyticsFragment"
+        android:icon="@drawable/ic_analytics"
+        android:title="Analitik"/>
+    <item
+        android:id="@+id/recapFragment"
+        android:icon="@drawable/ic_recap"
+        android:title="Rekap" />
+    <item
+        android:id="@+id/addTransactionFragment"
+        android:icon="@drawable/ic_add"
+        android:title="Add" />
+    <item
+        android:id="@+id/accountsFragment"
+        android:icon="@drawable/ic_person"
+        android:title="Akun Keluarga"/>
+
+    <item
+        android:id="@+id/youFragment"
+        android:icon="@drawable/ic_account"
+        android:title="Anda"/>
+</menu>

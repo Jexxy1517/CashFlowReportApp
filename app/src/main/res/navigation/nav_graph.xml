@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cashflowreportapp.LoginFragment"
+        android:label="LoginFragment">
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.cashflowreportapp.RegisterFragment"
+        android:label="RegisterFragment" />
+
+    <fragment
+        android:id="@+id/recapFragment"
+        android:name="com.example.cashflowreportapp.RecapFragment"
+        android:label="Rekap"
+        tools:layout="@layout/fragment_recap" />
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.cashflowreportapp.ForgotPasswordFragment"
+        android:label="Lupa Password" />
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.cashflowreportapp.TransactionsFragment"
+        android:label="Transaksi" />
+
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.example.cashflowreportapp.AddTransactionFragment"
+        android:label="Tambah Transaksi" />
+
+    <fragment
+        android:id="@+id/accountsFragment"
+        android:name="com.example.cashflowreportapp.AccountsFragment"
+        android:label="Accounts" />
+
+    <fragment
+        android:id="@+id/accountTransactionsFragment"
+        android:name="com.example.cashflowreportapp.AccountTransactionsFragment"
+        android:label="Account Transactions">
+        <argument
+            android:name="account_name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/youFragment"
+        android:name="com.example.cashflowreportapp.YouFragment"
+        android:label="Anda"
+        tools:layout="@layout/fragment_you">
+
+        <action
+            android:id="@+id/action_youFragment_to_accountTransactionsFragment"
+            app:destination="@id/accountTransactionsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.example.cashflowreportapp.AnalyticsFragment"
+        android:label="fragment_analytics"
+        tools:layout="@layout/fragment_analytics" />
+
+</navigation>

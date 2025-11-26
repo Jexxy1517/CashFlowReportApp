@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CashflowReportApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="profile_title">Profil Anda</string>
+    <string name="profile_icon_desc">Ikon profil pengguna</string>
+    <string name="logged_in_as">Masuk sebagai:</string>
+    <string name="view_personal_balance">Lihat Saldo Pribadi</string>
+    <string name="logout">Keluar</string>
+
+    <string name="export">Ekspor</string>
+    <string name="balance">Saldo Saat Ini</string>
+    <string name="total_income">Total Pemasukan</string>
+    <string name="total_expense">Total Pengeluaran</string>
+    <string name="transaction_history">Riwayat Transaksi</string>
+
+    <string-array name="months">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+
+</resources>
