@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "639226119167",
+    "project_id": "cashflowreportapp",
+    "storage_bucket": "cashflowreportapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639226119167:android:e5d15b1c4aab68d9b89dca",
+        "android_client_info": {
+          "package_name": "com.example.cashflowreportapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtWHxncC4VND7pg7AGtUqRZXXZ9cFVIBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
